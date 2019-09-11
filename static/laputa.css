@@ -1,0 +1,106 @@
+::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none;
+}
+
+html{
+    height:100%;
+}
+
+body{
+    z-index:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    margin:0;
+    background-color:#000000;
+    background-image:url("./img/laputa.gif");
+    background-size: cover;
+    background-position: center center;
+
+    color:#53e4f7;
+    font-family:sans-serif;
+    text-align:center;
+}
+
+.belt{
+    z-index:3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    left:0;
+    width:100%;
+    height:2.5em;
+    background-color:#292929;
+    color:#eeeeee;
+}
+
+.belt.header{
+    top:0;
+    font-size:3rem;
+}
+
+.belt.footer{
+    font-size:0.8rem;
+    bottom:0;
+}
+
+.main{
+    z-index:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    background-color: rgba(0,0,0,0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #292929), to(#292929)),
+    -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #292929), to(#292929));
+    -webkit-background-size: 0.4rem 0.4rem;
+}
+
+.button{
+    z-index:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:10em;
+    padding:1em;
+    box-sizing:border-box;
+    background-color:#53e4f7;
+    appearance: none;
+    -webkit-appearance: none;
+    color:#292929;
+    font-size:4em;
+    font-weight:bolder;
+    outline: none;
+    border: none;
+    border-radius:3em;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+}
+
+.button:disabled{
+    background-color:#d9d9d9;
+    color:#bbbbbb;
+    cursor: not-allowed;
+}
+
+.shaking {
+    animation: shaking-animation .1s  infinite;
+}
+
+@keyframes shaking-animation {
+    0% {transform: translate(0px, 0px)}
+    25% {transform: translate(0px, 3vw)}
+    50% {transform: translate(0px, 0px)}
+    75% {transform: translate(0px, 3vw)}
+    100% {transform: translate(0px, 0px)}
+}
